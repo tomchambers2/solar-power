@@ -29,11 +29,13 @@ export default function PanelSelector({
         ))}
       </select>
       <div className="mt-2 text-xs text-gray-600 space-y-1">
+        <p className="font-medium text-gray-700">{selectedPanel.manufacturer} {selectedPanel.model}</p>
         <p>
-          Size: {selectedPanel.heightM}m x {selectedPanel.widthM}m
+          Size: {(selectedPanel.heightM * 1000).toFixed(0)}mm x {(selectedPanel.widthM * 1000).toFixed(0)}mm
         </p>
         <p>Power: {selectedPanel.wattage}W</p>
-        <p>Efficiency: {(selectedPanel.efficiency * 100).toFixed(0)}%</p>
+        <p>Efficiency: {(selectedPanel.efficiency * 100).toFixed(1)}%</p>
+        <p>Area: {(selectedPanel.widthM * selectedPanel.heightM).toFixed(2)} m&sup2;</p>
       </div>
     </div>
   );
