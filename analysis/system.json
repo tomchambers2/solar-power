@@ -1,0 +1,62 @@
+{
+  "commissioned": "2026-08-26",
+  "installer": "Sunlight Future Ltd, Bristol",
+  "pv_kwp": 4.6,
+  "panels": "10 x JA Solar JAM54D41 460Wp",
+  "inverter": "Sigenergy SigenStor EC 3.6 SP (3.6 kW)",
+  "battery_kwh": 9.04,
+  "mcs_annual_yield_kwh": 3984,
+  "household_annual_use_kwh": 3303.3,
+  "cost": {
+    "currency": "GBP",
+    "contract_total": 10850.0,
+    "battery_upgrade_6to9kwh": 400.0,
+    "payments": [
+      {
+        "invoice": "INV-2728",
+        "label": "Deposit 15%",
+        "amount": 1627.5,
+        "date": "2026-05-20",
+        "status": "paid"
+      },
+      {
+        "invoice": "INV-2806",
+        "label": "Second payment 45%",
+        "amount": 4882.5,
+        "date": "2026-08-19",
+        "status": "paid"
+      },
+      {
+        "invoice": null,
+        "label": "Final 40% + battery upgrade",
+        "amount": 4740.0,
+        "date": null,
+        "status": "estimated"
+      }
+    ],
+    "total_estimated": 11250.0,
+    "note": "Final payment is INFERRED, not invoiced: 40% of the 10850 contract (4340) plus the 400 battery upgrade Sam confirmed would be added to the final invoice. Replace with the real figure when it arrives."
+  },
+  "installer_forecast_pvsol": {
+    "document": "4.65kWp PV with 6kWh SigEnergy Storage.pdf, 13 May 2026, PV*SOL premium 2026",
+    "note": "Modelled a 6 kWh battery; the installed system is 9.04 kWh, which should push self-consumption above these figures.",
+    "investment_gbp": 10850.0,
+    "amortization_period": "10 years 6 months",
+    "irr_percent": 9.1,
+    "ac_yield_kwh_yr": 4610,
+    "direct_own_use_kwh_yr": 2414,
+    "grid_export_kwh_yr": 2195,
+    "self_sufficiency_percent": 73.0,
+    "depends_on": "Assumes the 2,195 kWh/yr export is PAID FOR. With no SEG agreement it earns nothing, and the payback stretches to ~17 years on their own yield figures."
+  },
+  "mcs_estimate": {
+    "document": "MCS PV Calculator - Tom Chambers - 4.6kWp.pdf, 18 Aug 2026",
+    "annual_output_kwh": 3984,
+    "assumed_consumption_kwh": 3300,
+    "self_consumption_pv_only_kwh": 817,
+    "self_consumption_with_battery_kwh": 2275,
+    "self_sufficiency_percent": 69,
+    "assumed_usable_battery_kwh": 5.84,
+    "note": "MCS is the regulated, deliberately conservative method. It is 14% below the installer's PV*SOL yield for the same roof."
+  }
+}
